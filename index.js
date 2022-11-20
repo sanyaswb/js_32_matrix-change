@@ -1,5 +1,13 @@
 function changeMatrix(matrix) {
-	// write your code here
+	return matrix.map(arr => {
+		return arr.map(item => {
+			if (item === 0) {
+				return 'zero';
+			} else {
+				return 'one';
+			}
+		});
+	});
 }
 
 module.exports = changeMatrix;

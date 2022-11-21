@@ -1,13 +1,17 @@
 function changeMatrix(matrix) {
-	return matrix.map(arr => {
-		return arr.map(item => {
+	const newMatrix = [];
+	for (const row of matrix) {
+		const matrixRow = [];
+		for (const item of row) {
 			if (item === 0) {
-				return 'zero';
+				matrixRow.push('zero');
 			} else {
-				return 'one';
+				matrixRow.push('one');
 			}
-		});
-	});
+		}
+		newMatrix.push(matrixRow);
+	}
+	return newMatrix;
 }
 
 module.exports = changeMatrix;
